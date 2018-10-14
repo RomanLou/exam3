@@ -1,0 +1,25 @@
+.about {
+	background-color: $background-white;
+	padding-top: 125px;
+	text-align: center;
+
+	&_profile-wrapper {
+		background: url(../images/background/profile-bg.jpg) no-repeat top center;
+		background-size: cover; 
+		height: 555px;
+		text-align: center;
+	}
+
+	&-icon {
+		margin: 75px 0 45px;
+	}
+
+	&_text-wrapper {
+		text-align: left;
+		margin: 75px 0 100px;
+	}
+
+	&-text {
+		margin-bottom: 30px;
+	}
+}

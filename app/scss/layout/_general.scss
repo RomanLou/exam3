@@ -1,0 +1,110 @@
+@include font-face(ProximaNova, 'fonts/ProximaNova/ProximaNova-Regular');
+@include font-face(ProximaNova, 'fonts/ProximaNova/ProximaNova-Bold', 700);
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+	transition: all .3s ease-in-out;
+}
+
+.container {
+	max-width: 1200px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+html {
+	height: 100%;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+	font: 300 20px $font-main;
+	color: $text-grey;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+.subtitle {
+	font: 300 36px $font-title;
+	color: $text-white;
+	text-transform: uppercase;
+
+	&--grey {
+		color: $text-grey;
+	}
+}
+
+.button {
+	display: inline-block;
+	margin: 0 auto;
+	line-height: 50px;
+	text-decoration: none;
+	color: $text-grey;
+	border: 1px solid $text-grey;
+	padding: 0 50px;
+	vertical-align: middle;
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+	transition-property: color;
+	transition-duration: 0.3s;
+
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: $purple;
+		transform: scale(0);
+		transition-property: transform;
+		transition-duration: 0.3s;
+		transition-timing-function: ease-out;
+	}
+
+	&:hover {
+		text-decoration: none;
+		color: $text-grey;
+		border-color: $text-grey;
+	}
+
+	&:hover:before {
+		transform: scale(1);
+	}
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.white {
+	color: $text-white;
+	border-color: $text-white;
+}
+
+.grey {
+	background: $background-grey;
+}
+
+

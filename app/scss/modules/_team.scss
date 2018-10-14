@@ -1,0 +1,61 @@
+.team {
+	background-color: $background-white;
+	padding: 50px 0 100px;
+	text-align: center;
+
+	.subtitle {
+		margin-top: 35px;
+	}
+
+	&-slide{
+
+		padding-top: 190px;
+
+		&_wrapper {
+			background: #fff;
+			position: relative;
+			padding-top: 165px;
+			width: 350px;
+		}
+
+		&_photo {
+			@include pos($t:-40%);
+			transform: translateX(15%);
+			border: 13px solid $background-white;
+			border-radius: 50%;
+			z-index: 1;
+		}
+
+		&_name {
+			font: 700 24px $font-title;
+			color: $purple;
+			text-transform: uppercase;
+		}
+
+		&_postition {
+			margin: 35px 0 45px;
+		}
+
+		&_socials {
+			background: $purple;
+			display: flex;
+			justify-content: space-around;
+			padding: 15px 0;
+		}
+	}
+
+	.slick-p,
+	.slick-n  {
+		transform: translateY(-100%);
+		cursor: pointer;
+		z-index: 1;	
+	}
+
+	.slick-p {
+		@include pos($t:50%, $l:-120px);
+	}
+
+	.slick-n {
+		@include pos($t:50%, $r:-120px);
+	}
+}

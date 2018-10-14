@@ -1,0 +1,51 @@
+.works {
+	background: url(../images/background/slider-bg.jpg) no-repeat top center;
+	background-size: cover;
+	text-align: center;
+	padding: 50px 0 60px;
+
+	&_img {
+		margin: 0 auto;
+	}
+
+	.subtitle {
+		margin: 40px 0 70px;
+	}
+
+	.slick-prev,
+	.slick-next  {
+		transform: translateY(-100%);
+		cursor: pointer;
+		z-index: 1;	
+	}
+
+	.slick-prev {
+		@include pos($t:50%, $l:120px);
+	}
+
+	.slick-next {
+		@include pos($t:50%, $r:120px);
+	}
+
+	.slick-dots {
+		margin: 45px 0 50px;
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+
+       li {
+           margin: 5px;
+           @include size(10px);
+           border-radius: 50%;
+           border: 2px solid $text-white;
+
+           & button {
+               display: none;
+           }
+       }
+   }
+
+   li.slick-active {
+       background: $text-white;
+   }
+}

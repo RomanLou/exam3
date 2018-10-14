@@ -1,0 +1,65 @@
+.header {
+	@include size(100%, 100vh);
+	background: url(../images/background/header-bg.jpg) no-repeat top center;
+	background-size: cover;
+	padding-top: 35px;
+	color: $text-white;
+
+	&-menu {
+
+		&__items {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__link {
+			font: 300 24px/60px $font-title;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $text-white;
+			transition: none;
+
+			&:hover {
+				color: $text-white;
+				text-decoration: none;
+				border-bottom: 2px solid $text-white;
+			}
+		}
+	}
+
+	&-wrapper {
+		margin-top: 300px;
+		text-align: center;
+	}
+
+	&-title {
+		font: 700 72px $font-title;
+		text-transform: uppercase;
+	}
+
+	&-text {
+		font: 300 30px $font-main;
+		font-style: italic;
+
+	}
+}
+
+.logo {
+	  display: inline-block;
+	  vertical-align: middle;
+	  transform: perspective(1px) translateZ(0);
+	  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	  transition-duration: 0.3s;
+
+  & img {
+	  transform: translateZ(0);
+	  transition-duration: 0.3s;
+	  transition-property: transform;
+	  transition-timing-function: ease-out;
+  	}
+
+  	&:hover {
+	  transform: scale(1.5);
+	  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  	}
+}

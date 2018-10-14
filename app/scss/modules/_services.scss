@@ -1,0 +1,79 @@
+.services {
+	background-color: $background-white;
+	padding-top: 125px;
+	
+	.nopad {
+		padding: 0;
+	}
+
+	&-wrapper {
+		@include size(100%);
+		background: url(../images/background/services-bg.jpg) no-repeat top center;
+		background-size: cover;
+		text-align: center;
+		padding: 115px 30px 0;
+
+		.subtitle{
+			margin: 35px 0 100px;
+		}
+	}
+
+	&-list {
+
+		display: flex;
+		flex-wrap: wrap;
+
+		&_item {
+			@include size(50%, 25%);
+			border: none;
+			box-sizing: border-box;
+		}	
+	}
+
+	&-link {
+		display: inline-block;
+		@include size(100%);
+		padding: 100px 0 130px;
+		text-align: center;
+		text-decoration: none;
+		color: $text-grey;
+		vertical-align: middle;
+		transform: perspective(1px) translateZ(0);
+		position: relative;
+		transition-property: color;
+		transition-duration: 0.3s;
+
+		&_title {
+			font: 700 24px $font-main;
+			margin: 30px 0 20px;
+		}
+
+		&_text {
+			padding: 0 23%;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: $purple;
+			transform: scale(0);
+			transition-property: transform;
+			transition-duration: 0.3s;
+			transition-timing-function: ease-out;
+		}
+
+		&:hover {
+			text-decoration: none;
+			color: $text-grey;
+		}
+
+		&:hover:before {
+			transform: scale(1);
+		}
+	}
+}
