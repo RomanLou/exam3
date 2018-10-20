@@ -1,0 +1,33 @@
+.footer {
+	background: $purple;
+	padding: 80px 0;
+
+	@media (max-width: 720px) {
+		padding: 20px 0;
+	}
+
+	&_text {
+		text-align: center;
+		
+		@media (max-width: 1024px) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&_socials {
+		display: flex;
+		justify-content: space-between;
+
+		@media (max-width: 960px) {
+			justify-content: center;
+		}
+		@media (max-width: 720px) {
+			justify-content: center;
+		}
+	}
+
+	&_social {
+		margin-right: 25px;
+	}
+	
+}

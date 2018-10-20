@@ -4,12 +4,40 @@
 	background-size: cover;
 	padding-top: 35px;
 	color: $text-white;
-
+	
 	&-menu {
 
 		&__items {
 			display: flex;
 			justify-content: space-between;
+
+			@media (max-width: 1024px) {
+				justify-content: space-around;
+			}
+
+			@media (max-width: 540px) {
+				@include pos($pos: fixed, $t: 0, $r: 0);
+				flex-direction: column;
+				align-items: flex-end;
+				background: rgba(255, 255, 255, .8);
+				padding: 10px;
+				border-radius: 3px;
+				display: none;
+				z-index: 3;
+			}
+		}
+
+		&__item {
+
+			@media (max-width: 540px) {
+				width: 100%;
+				border-bottom: 1px solid $text-grey;
+				text-align: center;
+
+				&:last-of-type{
+					border-bottom: none;
+				}
+			}
 		}
 
 		&__link {
@@ -18,6 +46,10 @@
 			text-transform: uppercase;
 			color: $text-white;
 			transition: none;
+
+			@media (max-width: 540px) {
+				color: $text-grey;
+			}
 
 			&:hover {
 				color: $text-white;
@@ -30,17 +62,60 @@
 	&-wrapper {
 		margin-top: 300px;
 		text-align: center;
+
+		@media (max-width: 1024px){
+			margin-top: 200px;
+		}
+
+		@media (max-width: 720px) {
+			margin-top: 50px;
+		}
 	}
 
 	&-title {
 		font: 700 72px $font-title;
 		text-transform: uppercase;
+
+		@media (max-width: 720px) {
+			font-size: 45px;
+		}
 	}
 
 	&-text {
 		font: 300 30px $font-main;
 		font-style: italic;
 
+		@media (max-width: 720px) {
+			font-size: 20px;
+			margin-top: 20px;
+		}
+	}
+
+	&__burger {
+		display: none;
+		@include size(30px, 2px);
+		@include pos($pos: fixed, $r: 30px, $t: 65px);
+		background: $text-white;
+		z-index: 3;
+
+		&::before, &::after {
+			@include size(30px, 2px);
+			position: absolute;
+			content: "";
+			background: $text-white;
+		}
+
+		&::before {
+			top: -9px;
+		}
+
+		&::after {
+			bottom: -9px;
+		}
+
+		@media (max-width: 720px) {
+			display: inline-block;
+		}
 	}
 }
 
@@ -50,6 +125,11 @@
 	  transform: perspective(1px) translateZ(0);
 	  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 	  transition-duration: 0.3s;
+
+	  @media (max-width: 768px) {
+	  		display: block;
+			text-align: center;
+		}
 
   & img {
 	  transform: translateZ(0);
@@ -63,3 +143,4 @@
 	  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
   	}
 }
+

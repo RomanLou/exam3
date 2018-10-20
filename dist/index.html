@@ -17,7 +17,7 @@
 	<![endif]-->
 </head>
 <body>
-<header class="header">
+<header class="header" id="home">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-1">
@@ -27,21 +27,22 @@
 			</div>
 			<div class="col-lg-7 offset-lg-4">
 				<nav class="header-menu">
+					<div class="header__burger"></div>
 					<ul class="header-menu__items">
 						<li class="header-menu__item">
 							<a href="#" class="header-menu__link">Home</a>
 						</li>
 						<li class="header-menu__item">
-							<a href="#" class="header-menu__link">About</a>
+							<a href="#about" class="header-menu__link">About</a>
 						</li>
 						<li class="header-menu__item">
-							<a href="#" class="header-menu__link">Services</a>
+							<a href="#services" class="header-menu__link">Services</a>
 						</li>
 						<li class="header-menu__item">
-							<a href="#" class="header-menu__link">Works</a>
+							<a href="#works" class="header-menu__link">Works</a>
 						</li>
 						<li class="header-menu__item">
-							<a href="#" class="header-menu__link">Contact</a>
+							<a href="#contact" class="header-menu__link">Contact</a>
 						</li>
 					</ul>
 				</nav>
@@ -53,7 +54,7 @@
 		</div>
 	</div>	
 </header>
-<section class="about">
+<section class="about" id="about">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4">
@@ -72,10 +73,10 @@
 		</div>
 	</div>
 </section>
-<section class="services">
+<section class="services" id="services">
 	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 nopad">
+		<div class="row no-gutters">
+			<div class="col-lg-8">
 				<ul class="services-list">
 					<li class="services-list_item">
 						<a href="" class="services-link grey">
@@ -107,7 +108,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="col-lg-4 nopad">
+			<div class="col-lg-4 order-first">
 				<div class="services-wrapper">
 					<img src="images/icon/services.png" alt="services">
 					<h2 class="subtitle">Our Services</h2>
@@ -118,7 +119,7 @@
 		</div>
 	</div>
 </section>
-<section class="works">
+<section class="works" id="works">
 	<div class="container">
 		<img src="images/icon/works.png" alt="works" class="works-icon">
 		<h2 class="subtitle">Recent Works</h2>
@@ -139,7 +140,7 @@
 		<a href="#" class="button italic white">Learn More</a>
 	</div>
 </section>
-<section class="team">
+<section class="team" id="team">
 	<div class="container">
 		<img src="images/icon/team.png" alt="works" class="team-icon">
 		<h2 class="subtitle subtitle--grey">Meet our team</h2>
@@ -150,11 +151,6 @@
 					<p class="team-slide_name">Miguel Obrien</p>
 					<p class="team-slide_postition italic">CEO & Founder</p>
 					<ul class="team-slide_socials">
-						<li class="team-slide_social">
-							<a href="" class="team-slide_link">
-								<img src="images/icon/behance.png" alt="behance" class="team-slide_icon">
-							</a>
-						</li>
 						<li class="team-slide_social">
 							<a href="" class="team-slide_link">
 								<img src="images/icon/linked-in.png" alt="linked-in" class="team-slide_icon">
@@ -248,9 +244,9 @@
 			</div>
 			<div class="team-slide">
 				<div class="team-slide_wrapper">
-					<img src="images/content/person-1.jpg" alt="photo" class="team-slide_photo">
-					<p class="team-slide_name">Shitty Developer</p>
-					<p class="team-slide_postition italic">Ne Sdelal 2 Sections</p>
+					<img src="images/content/person-4.jpg" alt="photo" class="team-slide_photo">
+					<p class="team-slide_name">Roma Lou</p>
+					<p class="team-slide_postition italic">Front-end</p>
 					<ul class="team-slide_socials">
 						<li class="team-slide_social">
 							<a href="" class="team-slide_link">
@@ -283,6 +279,61 @@
 		</div>
 	</div>
 </section>
+<section class="contact" id="contact">
+	<div class="map" id="map"></div>
+	<div class="container">
+		<div class="contact-wrapper">
+			<img src="images/icon/location.png" alt="works">
+			<h2 class="subtitle">Get in touch</h2>
+			<form action="#" class="contact-form">
+				<div class="contact-form__row">
+					<input type="text" class="contact-form__input" placeholder="Your Name" required>
+					<input type="email" class="contact-form__input" id="inputEmail4" placeholder="Your email" required>
+				</div>
+				<textarea class="contact-form__textarea" name="message" rows="4" placeholder="Your Message" required></textarea>
+				<button type="submit" class="contact-form__btn">SEND MESSAGE</button>
+			</form>
+		</div>
+	</div>
+</section>
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<p class="footer_text white">©2014<span class="bold">tulus</span>driyo. All Rights Reserved.</p>
+			</div>
+			<div class="col-lg-4 offset-lg-2">
+				<ul class="footer_socials">
+					<li class="footer_social">
+						<a href="" class="footer_link">
+							<img src="images/icon/behance.png" alt="behance" class="team-slide_icon">
+						</a>
+					</li>
+					<li class="footer_social">
+						<a href="" class="footer_link">
+							<img src="images/icon/linked-in.png" alt="linked-in" class="team-slide_icon">
+						</a>
+					</li>
+					<li class="footer_social">
+						<a href="" class="footer_link">
+							<img src="images/icon/google.png" alt="google" class="team-slide_icon">
+						</a>
+					</li>
+					<li class="footer_social">
+						<a href="" class="footer_link">
+							<img src="images/icon/facebook.png" alt="facebook" class="team-slide_icon">
+						</a>
+					</li>
+					<li class="footer_social">
+						<a href="" class="footer_link">
+							<img src="images/icon/twitter.png" alt="twitter" class="team-slide_icon">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
 
 	<script src="js/main.min.js"></script>
 </body>

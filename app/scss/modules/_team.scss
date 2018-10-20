@@ -3,6 +3,11 @@
 	padding: 50px 0 100px;
 	text-align: center;
 
+	@media (max-width: 720px) {
+		padding: 15px 0;
+		font-size: 12px;
+	}
+
 	.subtitle {
 		margin-top: 35px;
 	}
@@ -11,11 +16,16 @@
 
 		padding-top: 190px;
 
+		@media (max-width: 720px) {
+			padding-top: 150px;
+		}
+
 		&_wrapper {
 			background: #fff;
 			position: relative;
 			padding-top: 165px;
-			width: 350px;
+			max-width: 350px;
+			margin: 0 auto;
 		}
 
 		&_photo {
@@ -30,6 +40,10 @@
 			font: 700 24px $font-title;
 			color: $purple;
 			text-transform: uppercase;
+
+			@media (max-width: 720px) {
+				font-size: 16px;
+			}
 		}
 
 		&_postition {
@@ -39,8 +53,16 @@
 		&_socials {
 			background: $purple;
 			display: flex;
-			justify-content: space-around;
+			justify-content: center;
 			padding: 15px 0;
+		}
+
+		&_social {
+			margin-left: 25px;
+
+			&:first-of-type{
+				margin-left: 0;
+			}
 		}
 	}
 
@@ -53,9 +75,25 @@
 
 	.slick-p {
 		@include pos($t:50%, $l:-120px);
+
+		@media (max-width: 1024px) {
+			left: 20px;
+		}
+
+		@media (max-width: 540px) {
+			z-index: -1;
+		}
 	}
 
 	.slick-n {
 		@include pos($t:50%, $r:-120px);
+
+		@media (max-width: 1024px) {
+			right: 20px;
+		}
+
+		@media (max-width: 540px) {
+			z-index: -1;
+		}
 	}
 }

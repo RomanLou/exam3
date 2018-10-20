@@ -21,10 +21,26 @@
 
 	.slick-prev {
 		@include pos($t:50%, $l:120px);
+
+		@media (max-width: 1024px) {
+			left: 20px;
+		}
+
+		@media (max-width: 768px) {
+			z-index: -1;
+		}
 	}
 
 	.slick-next {
 		@include pos($t:50%, $r:120px);
+
+		@media (max-width: 1024px) {
+			right: 20px;
+		}
+
+		@media (max-width: 768px) {
+			z-index: -1;
+		}
 	}
 
 	.slick-dots {

@@ -28,7 +28,13 @@ body, html {
 	width: 100%;
 	font: 300 20px $font-main;
 	color: $text-grey;
+
+	@media (max-width: 720px) {
+		font-size: 12px;
+	}
 }
+
+
 
 .clear::after, .clear::before {
 	content: " ";
@@ -43,6 +49,10 @@ body, html {
 	font: 300 36px $font-title;
 	color: $text-white;
 	text-transform: uppercase;
+
+	@media (max-width: 720px) {
+		font-size: 18px;
+	}
 
 	&--grey {
 		color: $text-grey;
@@ -107,4 +117,28 @@ body, html {
 	background: $background-grey;
 }
 
+.map {
+	height: 900px;
 
+	@media (max-width: 1024px) {
+		height: 750px;
+	}
+
+	@media (max-width: 720px) {
+		height: 600px;
+	}
+}
+
+#go-top{
+	@include pos($pos: fixed, $r: 130px, $b: 230px);
+	z-index: 3;
+	padding: 25px 22px;
+	background: rgba(159, 154, 207, .5);
+	display: none;
+	cursor: pointer;
+
+	@media (max-width: 1024px) {
+			right: 20px;
+			bottom: 20px;
+		}
+}
